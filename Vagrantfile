@@ -64,6 +64,9 @@ Vagrant.configure("2") do |config|
   
   #   # Customize the amount of memory on the VM:
     vb.cpus = 2
+
+    # serial port definition    
+    vb.customize ["modifyvm", :id, "--uartmode1", "file", File::NULL]
   end
 
   #
